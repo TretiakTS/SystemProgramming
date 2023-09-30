@@ -1,0 +1,14 @@
+This is a test sentence with unusual characters like $ymbol$, numbers123, and some p#unctuation! 
+
+Weird_words_here 3x@mpl3 5tr1ng$. Do you understand?! 
+
+Is it working properly?
+
+Here are some words with double consonants: swimming|letter#bookkeeper,successful;unnecessary_Mississippi!accommodation,aggressor?
+
+And more text to test the program under various conditions: programming,occurrence:success:different~Mississippi~abstraction,necessary,aggression,addressing;successful.accessibility
+~occurrence.dispossessing|Mississippi|thisshouldntbethereaaaaaaaaaaaaaaaattttrtrbrtbewbrtbtb
+
+Also, we can't forget about numbers like 44;99?1001.
+
+Testing_testing~1-2-3. Is the program working well has?
