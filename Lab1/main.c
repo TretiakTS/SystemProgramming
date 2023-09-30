@@ -72,11 +72,17 @@ int hasDoubleConsonants(const char *word) {
 }
 
 int main() {
-    char filename[] = "C:\\Users\\tretiak\\CLionProjects\\SystemProgramming_lab1\\text.txt";
-    FILE *file = fopen(filename, "r");
-
-    if (file == NULL) {
+    char inputfilename[] = "C:\\Users\\tretiak\\CLionProjects\\SystemProgramming_lab1\\text.txt";
+    char outputfilename[] = "C:\\Users\\tretiak\\CLionProjects\\SystemProgramming_lab1\\output.txt";
+    FILE *inputFile = fopen(inputfilename, "r");
+    FILE *outputFile = fopen(outputfilename, "w");
+    if (inputFile == NULL) {
         perror("Error opening the file");
+        return 1;
+    }
+
+    if (outputFile == NULL) {
+        perror("Error opening the output file");
         return 1;
     }
 
@@ -84,7 +90,7 @@ int main() {
     int uniqueWordCount = 0;
 
     char *word;
-    while ((word = readOneWord(file)) != NULL) {
+    while ((word = readOneWord(inputFile)) != NULL) {
         if (strlen(word) > 0 && hasDoubleConsonants(word)) {
             int isDuplicate = 0;
 
@@ -100,6 +106,7 @@ int main() {
             if (!isDuplicate) {
                 strcpy(uniqueWords[uniqueWordCount], word);
                 uniqueWordCount++;
+                fprintf(outputFile, "%s\n", word);
             }
         }
         free(word); // Free the memory allocated by readOneWord
@@ -110,6 +117,8 @@ int main() {
         printf("%s\n", uniqueWords[i]);
     }
 
-    fclose(file);
+    fclose(inputFile);
+    fclose(outputFile);
     return 0;
 }
+
