@@ -87,9 +87,6 @@ Token getNextToken(const char** src) {
         // Check for numbers.
     else if (isdigit(*s)) {
         if (*s == '0' && *(s+1) == 'x') {
-            // This would be where we'd handle hexadecimal numbers.
-            // But since C# primarily uses "0x" prefix, this block is currently skipped.
-            // Expand here if needed.
         } else {
             token.type = DECIMAL_NUMBER;
             while (isdigit(*s)) {
